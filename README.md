@@ -7,7 +7,9 @@
 [![PyPI](https://img.shields.io/pypi/v/kindling-igniter)](https://pypi.org/project/kindling-igniter/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Part of [Kindling](https://github.com/Kind-ling/docs) — open infrastructure for the agent economy.
+Part of [Kindling](https://github.com/Kind-ling) — agent SEO for the agent economy.
+
+> **Ecosystem tool.** Igniter scaffolds the infrastructure. For x402 payment routing, also see [MCPay](https://mcpay.tech) — a compatible and complementary payment layer. For optimizing the descriptions Igniter generates, use [Twig](https://github.com/Kind-ling/twig).
 
 ---
 
