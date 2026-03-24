@@ -1,0 +1,47 @@
+# Kindling Igniter Configuration
+# All values shown are defaults. Every parameter is overridable.
+
+payment:
+  # Chain for settlement
+  chain: base
+  chainId: 8453  # Base mainnet. Use 84532 for Base Sepolia testnet.
+
+  # Payment asset
+  asset: USDC
+  assetAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"  # USDC on Base
+
+  # x402 facilitator (handles payment verification)
+  facilitator: "https://x402.org/facilitator"
+
+  # Maximum age of a payment receipt before rejection (seconds)
+  maxAgeSeconds: 60
+
+referral:
+  # Default referral split (percentage of payment to referring wallet)
+  # Range: 0-100. Set to 0 to disable referral economics.
+  # Note: Kindling Verifier only recognizes splits up to 50%.
+  # Splits above 50% are flagged as promotional.
+  splitPct: 15
+
+  # Referring wallet address (if known at config time)
+  # Can also be set per-request via middleware options
+  wallet: null
+
+a2a:
+  # Auto-serve agent.json at this path
+  wellKnownPath: "/.well-known/agent.json"
+
+  # Include provenance in agent card
+  includeProvenance: true
+
+mcp:
+  # Optimize tool descriptions for semantic search
+  # (adds relevant tags and improves description quality)
+  semanticOptimize: true
+
+telemetry:
+  # Opt-in to Kindling Verifier reliability scoring
+  # Sends: latency, status codes, uptime data
+  # Does NOT send: request bodies, user data, payment details
+  enabled: false
+  endpoint: "https://telemetry.kindling.build"

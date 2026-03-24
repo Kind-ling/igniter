@@ -1,0 +1,32 @@
+{
+  "name": "@kindling/igniter",
+  "version": "0.1.0",
+  "description": "x402 + MCP + A2A scaffolding for any agent service",
+  "author": "Permanent Upper Class",
+  "license": "MIT",
+  "homepage": "https://github.com/Kind-ling/igniter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kind-ling/igniter.git"
+  },
+  "workspaces": [
+    "packages/express",
+    "generators"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.1.0",
+    "express": "^4.18.2",
+    "supertest": "^6.3.4",
+    "@types/supertest": "^6.0.2"
+  }
+}
