@@ -7,42 +7,28 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  test-node:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+      - run: npm install
+      - run: npm test
+      - run: npm run typecheck
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-
-      - name: Type check
-        run: npm run typecheck
-
-  python:
+  test-python:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install Python package
         run: |
-          cd packages/fastapi
-          pip install -e ".[dev]"
-
+          pip install fastapi httpx pytest anyio
+          pip install -e packages/fastapi/
       - name: Run Python tests
-        run: |
-          cd packages/fastapi
-          pytest tests/ -v
+        run: pytest packages/fastapi/tests/ -v
