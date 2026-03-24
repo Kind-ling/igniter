@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "kindling-igniter"
@@ -22,3 +22,7 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/Kind-ling/igniter"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kindling_igniter*"]
