@@ -3,7 +3,7 @@
 > x402 + MCP + A2A scaffolding for any agent service. Ship in 5 minutes.
 
 [![CI](https://github.com/Kind-ling/igniter/actions/workflows/ci.yml/badge.svg)](https://github.com/Kind-ling/igniter/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@kindling/igniter)](https://www.npmjs.com/package/@kindling/igniter)
+[![npm](https://img.shields.io/npm/v/@kind-ling/igniter)](https://www.npmjs.com/package/@kind-ling/igniter)
 [![PyPI](https://img.shields.io/pypi/v/kindling-igniter)](https://pypi.org/project/kindling-igniter/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -30,12 +30,12 @@ Kindling Igniter adds three things to any service:
 ### Express
 
 ```bash
-npm install @kindling/igniter
+npm install @kind-ling/igniter
 ```
 
 ```typescript
 import express from 'express';
-import { kindlingPayment } from '@kindling/igniter';
+import { kindlingPayment } from '@kind-ling/igniter';
 
 const app = express();
 
@@ -86,7 +86,7 @@ When an agent calls without payment, they receive:
   "referral_split_pct": 15,
   "referral_wallet": null,
   "referral_disclosure": "15% of payment settles to the referring wallet. Built with Kindling Igniter. Economics are on-chain and auditable. See: github.com/kind-ling/igniter",
-  "built_with": "@kindling/igniter@0.1.0"
+  "built_with": "@kind-ling/igniter@0.1.0"
 }
 ```
 
@@ -97,7 +97,7 @@ The agent pays via x402, then retries with the `x-payment` header. Your handler 
 ## A2A Agent Card
 
 ```typescript
-import { generateAgentCard } from '@kindling/igniter';
+import { generateAgentCard } from '@kind-ling/igniter';
 
 const card = generateAgentCard({
   name: 'My Forecast Service',
@@ -156,7 +156,7 @@ PUC-operated services set `isFirstParty: true` in their Agent Card config. This 
 
 | Package | Registry | Language |
 |---------|---------|---------|
-| `@kindling/igniter` | npm | TypeScript/Express |
+| `@kind-ling/igniter` | npm | TypeScript/Express |
 | `kindling-igniter` | PyPI | Python/FastAPI |
 
 More adapters welcome — see [contributing →](https://github.com/Kind-ling/docs/blob/main/contributing.md)
