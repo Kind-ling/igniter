@@ -1,25 +1,26 @@
-# MISTAKES.md — Kindling Error Corpus
+# MISTAKES.md — Error Corpus
 
 > Append-only during the day. Review weekly.
-> Patterns that repeat get promoted to CLAUDE.md as permanent rules.
-> Format: date → what happened → fix → whether it should become a rule.
-
----
 
 ## Template
 
 ```
-### [Short description of the mistake]
+### [Short description]
 - **Date:** YYYY-MM-DD
-- **What happened:** [What the agent did wrong]
-- **Expected:** [What should have happened]
-- **Fix:** [How it was corrected]
-- **Root cause:** [Why it happened — vague spec? Missing convention? Model limitation?]
-- **Rule candidate:** YES/NO — [If YES, draft the rule for CLAUDE.md]
+- **What happened:**
+- **Expected:**
+- **Fix:**
+- **Root cause:**
+- **Rule candidate:** YES/NO
 ```
 
----
+## Known patterns (inherited from twig)
+
+- JSON.parse on files from disk must always be in try/catch
+- Payment verification stubs must return `false` by default
+- Define all type union variants before implementation begins
+- Grep for dead variables after implementation
 
 ## Log
 
-*No entries yet. First mistake hasn't happened — or hasn't been logged.*
+*No entries yet.*

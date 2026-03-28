@@ -191,3 +191,15 @@ Patterns that repeat get promoted to this file as permanent rules.
 - `.claude/commands/` — /plan /execute /review /mistake /spec
 - `MISTAKES.md` — error corpus, append-only
 - `specs/` — spec history
+
+## Agent Kit
+
+| File | Purpose |
+|------|---------|
+| `.claude/agents/implementer.md` | sonnet — write code, referral economics integrity |
+| `.claude/agents/reviewer.md` | opus — read-only, referral + first-party focus |
+| `.claude/commands/` | /plan /execute /review /mistake /spec |
+| `MISTAKES.md` | Error corpus |
+| `specs/` | Spec history |
+
+Loop: `/spec` → `/plan` → iterate → `/execute` → `/review` → commit → `/mistake`
