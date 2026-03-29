@@ -1,25 +1,20 @@
 # MISTAKES.md — Error Corpus
 
 > Append-only during the day. Review weekly.
+> Patterns that repeat get promoted to CLAUDE.md as permanent rules.
+> Format: date → what happened → fix → root cause → rule candidate
 
 ## Template
 
 ```
 ### [Short description]
 - **Date:** YYYY-MM-DD
-- **What happened:**
-- **Expected:**
-- **Fix:**
-- **Root cause:**
-- **Rule candidate:** YES/NO
+- **What happened:** [What the agent did wrong]
+- **Expected:** [What should have happened]
+- **Fix:** [How it was corrected]
+- **Root cause:** [vague spec? missing convention? model limitation?]
+- **Rule candidate:** YES/NO — [draft rule if YES]
 ```
-
-## Known patterns (inherited from twig)
-
-- JSON.parse on files from disk must always be in try/catch
-- Payment verification stubs must return `false` by default
-- Define all type union variants before implementation begins
-- Grep for dead variables after implementation
 
 ## Log
 
